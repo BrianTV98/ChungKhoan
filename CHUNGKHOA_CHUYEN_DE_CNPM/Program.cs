@@ -16,7 +16,7 @@ namespace CHUNGKHOA_CHUYEN_DE_CNPM
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_dat_lenh());
+            Application.Run(new frm_bang_gia());
         }
     }
 }

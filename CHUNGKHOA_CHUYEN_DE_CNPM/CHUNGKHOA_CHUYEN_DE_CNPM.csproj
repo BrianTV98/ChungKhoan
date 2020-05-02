@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frm_bang_gia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_bang_gia.Designer.cs">
+      <DependentUpon>frm_bang_gia.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_dat_lenh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +60,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm_bang_gia.resx">
+      <DependentUpon>frm_bang_gia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_dat_lenh.resx">
       <DependentUpon>frm_dat_lenh.cs</DependentUpon>
     </EmbeddedResource>

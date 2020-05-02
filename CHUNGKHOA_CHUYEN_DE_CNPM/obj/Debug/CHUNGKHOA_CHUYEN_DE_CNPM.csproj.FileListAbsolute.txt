@@ -7,3 +7,14 @@ E:\Năm 4\Tài Liệu mùa COrona\Chuyên đề Công nghệ phần mềm\BaoCao
 E:\Năm 4\Tài Liệu mùa COrona\Chuyên đề Công nghệ phần mềm\BaoCaoChuyenDe\CHUNGKHOA_CHUYEN_DE_CNPM\CHUNGKHOA_CHUYEN_DE_CNPM\obj\Debug\CHUNGKHOA_CHUYEN_DE_CNPM.csproj.GenerateResource.Cache
 E:\Năm 4\Tài Liệu mùa COrona\Chuyên đề Công nghệ phần mềm\BaoCaoChuyenDe\CHUNGKHOA_CHUYEN_DE_CNPM\CHUNGKHOA_CHUYEN_DE_CNPM\obj\Debug\CHUNGKHOA_CHUYEN_DE_CNPM.exe
 E:\Năm 4\Tài Liệu mùa COrona\Chuyên đề Công nghệ phần mềm\BaoCaoChuyenDe\CHUNGKHOA_CHUYEN_DE_CNPM\CHUNGKHOA_CHUYEN_DE_CNPM\obj\Debug\CHUNGKHOA_CHUYEN_DE_CNPM.pdb
+C:\Users\hienh\Documents\GitHub\ChungKhoan\CHUNGKHOA_CHUYEN_DE_CNPM\obj\Debug\CHUNGKHOA_CHUYEN_DE_CNPM.csprojAssemblyReference.cache
+C:\Users\hienh\Documents\GitHub\ChungKhoan\CHUNGKHOA_CHUYEN_DE_CNPM\obj\Debug\CHUNGKHOA_CHUYEN_DE_CNPM.frm_bang_gia.resources
+C:\Users\hienh\Documents\GitHub\ChungKhoan\CHUNGKHOA_CHUYEN_DE_CNPM\obj\Debug\CHUNGKHOA_CHUYEN_DE_CNPM.frm_dat_lenh.resources
+C:\Users\hienh\Documents\GitHub\ChungKhoan\CHUNGKHOA_CHUYEN_DE_CNPM\obj\Debug\CHUNGKHOA_CHUYEN_DE_CNPM.Properties.Resources.resources
+C:\Users\hienh\Documents\GitHub\ChungKhoan\CHUNGKHOA_CHUYEN_DE_CNPM\obj\Debug\CHUNGKHOA_CHUYEN_DE_CNPM.csproj.GenerateResource.cache
+C:\Users\hienh\Documents\GitHub\ChungKhoan\CHUNGKHOA_CHUYEN_DE_CNPM\obj\Debug\CHUNGKHOA_CHUYEN_DE_CNPM.csproj.CoreCompileInputs.cache
+C:\Users\hienh\Documents\GitHub\ChungKhoan\CHUNGKHOA_CHUYEN_DE_CNPM\obj\Debug\CHUNGKHOA_CHUYEN_DE_CNPM.exe
+C:\Users\hienh\Documents\GitHub\ChungKhoan\CHUNGKHOA_CHUYEN_DE_CNPM\obj\Debug\CHUNGKHOA_CHUYEN_DE_CNPM.pdb
+C:\Users\hienh\Documents\GitHub\ChungKhoan\CHUNGKHOA_CHUYEN_DE_CNPM\bin\Debug\CHUNGKHOA_CHUYEN_DE_CNPM.exe.config
+C:\Users\hienh\Documents\GitHub\ChungKhoan\CHUNGKHOA_CHUYEN_DE_CNPM\bin\Debug\CHUNGKHOA_CHUYEN_DE_CNPM.exe
+C:\Users\hienh\Documents\GitHub\ChungKhoan\CHUNGKHOA_CHUYEN_DE_CNPM\bin\Debug\CHUNGKHOA_CHUYEN_DE_CNPM.pdb
