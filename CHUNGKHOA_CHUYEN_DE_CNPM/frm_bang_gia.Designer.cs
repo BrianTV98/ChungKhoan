@@ -42,8 +42,9 @@
             this.gvBangGia.ReadOnly = true;
             this.gvBangGia.RowHeadersWidth = 82;
             this.gvBangGia.RowTemplate.Height = 33;
-            this.gvBangGia.Size = new System.Drawing.Size(2315, 1402);
+            this.gvBangGia.Size = new System.Drawing.Size(2273, 1071);
             this.gvBangGia.TabIndex = 0;
+            this.gvBangGia.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvBangGia_CellContentClick);
             // 
             // frm_bang_gia
             // 

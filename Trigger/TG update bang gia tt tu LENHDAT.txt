@@ -1,0 +1,150 @@
+USE [CHUNGKHOAN]
+GO
+/****** Object:  Trigger [dbo].[TG_Update_Gia_Truc_Tuyen]    Script Date: 5/3/2020 6:11:50 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- Batch submitted through debugger: SQLQuery16.sql|7|0|C:\Users\hienh\AppData\Local\Temp\~vs3FA5.sql
+-- =============================================
+-- Author:  	<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- =============================================
+ALTER TRIGGER [dbo].[TG_Update_Gia_Truc_Tuyen]
+ON [dbo].[LENHDAT]
+AFTER INSERT
+AS
+BEGIN
+  -- SET NOCOUNT ON added to prevent extra result sets from
+  -- interfering with SELECT statements.
+  SET NOCOUNT ON;
+
+  -- Insert statements for trigger here
+  DECLARE @maCPTT char(7),
+          @maCP char(7)
+  DECLARE @loaiGD char(1)
+  DECLARE @mGia float
+  DECLARE @mKL int
+  DECLARE @ngay nvarchar(50)
+  DECLARE @idLenh nvarchar(50),
+          @counter int
+
+  SELECT
+    @maCPTT = MACP
+  FROM GIATRUCTUYEN
+  WHERE MACP = (SELECT
+    MACP
+  FROM inserted)
+  SELECT
+    @idLenh = ID,
+    @maCP = MACP,
+    @loaiGD = LOAIGD,
+    @mGia = GIADAT,
+    @mKL = SOLUONG,
+    @ngay = NGAYDAT
+  FROM inserted
+  IF (@maCPTT IS NULL)
+  BEGIN
+    IF (@loaiGD = 'M')
+    BEGIN
+      INSERT INTO GIATRUCTUYEN (MACP, MG1, MK1)
+        VALUES (@maCP, @mGia, @mKL)
+    END
+    IF (@loaiGD = 'B')
+    BEGIN
+      INSERT INTO GIATRUCTUYEN (MACP, BG1, BK1)
+        VALUES (@maCP, @mGia, @mKL)
+    END
+  END
+  ELSE
+  BEGIN
+    SET DATEFORMAT DMY
+	DECLARE @CrsrVar CURSOR 
+    DECLARE @soluong int,
+            @giadat float
+
+    IF (@loaiGD = 'M')
+    BEGIN
+	  set @CrsrVar = CURSOR KEYSET FOR
+      SELECT TOP 2
+        SOLUONG,
+        GIADAT
+      FROM LENHDAT
+      WHERE
+	  MACP = @macp
+      AND DAY(NGAYDAT) = DAY(@ngay)
+      AND MONTH(NGAYDAT) = MONTH(@ngay)
+      AND YEAR(NGAYDAT) = YEAR(@ngay)
+      AND LOAIGD = @loaiGD
+      AND SOLUONG > 0
+      ORDER BY GIADAT DESC, NGAYDAT --  GIÁ ĐẶT GIẢM DẦN, NGÀY ĐẶT TĂNG DẦN
+      OPEN @CrsrVar
+      FETCH NEXT FROM @CrsrVar INTO @soluong, @giadat
+      SET @counter = 0
+      WHILE (@@FETCH_STATUS <> -1
+        AND @counter != 2)
+      BEGIN
+          IF @counter = 0
+          BEGIN
+            UPDATE GIATRUCTUYEN
+            SET MG1 = @giadat,
+                MK1 = @soluong
+            WHERE MACP = @maCP
+          END
+          ELSE
+          BEGIN
+            UPDATE GIATRUCTUYEN
+            SET MG2 = @giadat,
+                MK2 = @soluong
+            WHERE MACP = @maCP
+          END
+		SET @counter = @counter + 1
+		  FETCH NEXT FROM @CrsrVar INTO @soluong, @giadat
+      END
+	  close @CrsrVar
+	deallocate @CrsrVar
+    end
+	else 
+	begin 
+	set @CrsrVar = CURSOR KEYSET FOR
+      SELECT TOP 2
+        SOLUONG,
+        GIADAT
+      FROM LENHDAT
+      WHERE MACP = @macp
+      AND DAY(NGAYDAT) = DAY(@ngay)
+      AND MONTH(NGAYDAT) = MONTH(@ngay)
+      AND YEAR(NGAYDAT) = YEAR(@ngay)
+      AND LOAIGD = @LoaiGD
+      AND SOLUONG > 0
+      ORDER BY GIADAT, NGAYDAT --  GIÁ ĐẶT TĂNG DẦN, NGÀY ĐẶT TĂNG DẦN
+      OPEN @CrsrVar
+      FETCH NEXT FROM @CrsrVar INTO @soluong, @giadat
+      SET @counter = 0
+      WHILE (@@FETCH_STATUS <> -1
+        AND @counter != 2)
+      BEGIN
+          IF @counter = 0
+          BEGIN
+            UPDATE GIATRUCTUYEN
+            SET BG1 = @giadat,
+                BK1 = @soluong
+            WHERE MACP = @maCP
+          END
+          ELSE
+          BEGIN
+            UPDATE GIATRUCTUYEN
+            SET BG2 = @giadat,
+                BK2 = @soluong
+            WHERE MACP = @maCP
+          END
+		SET @counter = @counter + 1
+		  FETCH NEXT FROM @CrsrVar INTO @soluong, @giadat
+      END
+	  close @CrsrVar
+	deallocate @CrsrVar
+
+	end
+  END
+END
