@@ -18,3 +18,4 @@ C:\Users\hienh\Documents\GitHub\ChungKhoan\CHUNGKHOA_CHUYEN_DE_CNPM\obj\Debug\CH
 C:\Users\hienh\Documents\GitHub\ChungKhoan\CHUNGKHOA_CHUYEN_DE_CNPM\bin\Debug\CHUNGKHOA_CHUYEN_DE_CNPM.exe.config
 C:\Users\hienh\Documents\GitHub\ChungKhoan\CHUNGKHOA_CHUYEN_DE_CNPM\bin\Debug\CHUNGKHOA_CHUYEN_DE_CNPM.exe
 C:\Users\hienh\Documents\GitHub\ChungKhoan\CHUNGKHOA_CHUYEN_DE_CNPM\bin\Debug\CHUNGKHOA_CHUYEN_DE_CNPM.pdb
+E:\Năm 4\Tài Liệu mùa COrona\Chuyên đề Công nghệ phần mềm\BaoCaoChuyenDe\CHUNGKHOA_CHUYEN_DE_CNPM\CHUNGKHOA_CHUYEN_DE_CNPM\obj\Debug\CHUNGKHOA_CHUYEN_DE_CNPM.frm_bang_gia.resources
