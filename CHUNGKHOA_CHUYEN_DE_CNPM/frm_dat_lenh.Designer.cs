@@ -32,8 +32,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.frmDatLenh_cbMaCK = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.cb_soluong = new System.Windows.Forms.ComboBox();
-            this.edit_giaGD = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -50,7 +48,8 @@
             this.frmDatlenh = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.frmDatLenh_btnDatLenh = new System.Windows.Forms.Button();
-            this.frmDatLenh_btnThayDoi = new System.Windows.Forms.Button();
+            this.cb_soluong = new System.Windows.Forms.TextBox();
+            this.edit_giaGD = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,22 +93,6 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Mã CK";
             // 
-            // cb_soluong
-            // 
-            this.cb_soluong.FormattingEnabled = true;
-            this.cb_soluong.Location = new System.Drawing.Point(356, 67);
-            this.cb_soluong.Name = "cb_soluong";
-            this.cb_soluong.Size = new System.Drawing.Size(121, 24);
-            this.cb_soluong.TabIndex = 4;
-            // 
-            // edit_giaGD
-            // 
-            this.edit_giaGD.FormattingEnabled = true;
-            this.edit_giaGD.Location = new System.Drawing.Point(683, 67);
-            this.edit_giaGD.Name = "edit_giaGD";
-            this.edit_giaGD.Size = new System.Drawing.Size(121, 24);
-            this.edit_giaGD.TabIndex = 5;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -124,7 +107,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(680, 33);
+            this.label4.Location = new System.Drawing.Point(689, 33);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 18);
             this.label4.TabIndex = 9;
@@ -148,6 +131,7 @@
             this.groupBox1.Size = new System.Drawing.Size(753, 100);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Visible = false;
             // 
             // frmDatLenh_lbKLMuaToiDa
             // 
@@ -257,7 +241,10 @@
             // 
             // frmDatlenh
             // 
+            this.frmDatlenh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.frmDatlenh.FormattingEnabled = true;
+            this.frmDatlenh.Items.AddRange(new object[] {
+            "LO"});
             this.frmDatlenh.Location = new System.Drawing.Point(514, 67);
             this.frmDatlenh.Name = "frmDatlenh";
             this.frmDatlenh.Size = new System.Drawing.Size(121, 24);
@@ -278,7 +265,7 @@
             this.frmDatLenh_btnDatLenh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.frmDatLenh_btnDatLenh.Font = new System.Drawing.Font("VNI 06 Springtime", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.frmDatLenh_btnDatLenh.ForeColor = System.Drawing.Color.White;
-            this.frmDatLenh_btnDatLenh.Location = new System.Drawing.Point(420, 261);
+            this.frmDatLenh_btnDatLenh.Location = new System.Drawing.Point(683, 261);
             this.frmDatLenh_btnDatLenh.Name = "frmDatLenh_btnDatLenh";
             this.frmDatLenh_btnDatLenh.Size = new System.Drawing.Size(108, 36);
             this.frmDatLenh_btnDatLenh.TabIndex = 16;
@@ -286,33 +273,34 @@
             this.frmDatLenh_btnDatLenh.UseVisualStyleBackColor = false;
             this.frmDatLenh_btnDatLenh.Click += new System.EventHandler(this.frmDatLenh_btnDatLenh_Click);
             // 
-            // frmDatLenh_btnThayDoi
+            // cb_soluong
             // 
-            this.frmDatLenh_btnThayDoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.frmDatLenh_btnThayDoi.Font = new System.Drawing.Font("VNI 06 Springtime", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.frmDatLenh_btnThayDoi.ForeColor = System.Drawing.Color.White;
-            this.frmDatLenh_btnThayDoi.Location = new System.Drawing.Point(575, 261);
-            this.frmDatLenh_btnThayDoi.Name = "frmDatLenh_btnThayDoi";
-            this.frmDatLenh_btnThayDoi.Size = new System.Drawing.Size(114, 36);
-            this.frmDatLenh_btnThayDoi.TabIndex = 17;
-            this.frmDatLenh_btnThayDoi.Text = "THAY ĐỔI";
-            this.frmDatLenh_btnThayDoi.UseVisualStyleBackColor = false;
+            this.cb_soluong.Location = new System.Drawing.Point(339, 65);
+            this.cb_soluong.Name = "cb_soluong";
+            this.cb_soluong.Size = new System.Drawing.Size(121, 22);
+            this.cb_soluong.TabIndex = 18;
+            // 
+            // edit_giaGD
+            // 
+            this.edit_giaGD.Location = new System.Drawing.Point(683, 69);
+            this.edit_giaGD.Name = "edit_giaGD";
+            this.edit_giaGD.Size = new System.Drawing.Size(121, 22);
+            this.edit_giaGD.TabIndex = 19;
             // 
             // frm_dat_lenh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(960, 309);
-            this.Controls.Add(this.frmDatLenh_btnThayDoi);
+            this.ClientSize = new System.Drawing.Size(902, 309);
+            this.Controls.Add(this.edit_giaGD);
+            this.Controls.Add(this.cb_soluong);
             this.Controls.Add(this.frmDatLenh_btnDatLenh);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.frmDatlenh);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.edit_giaGD);
-            this.Controls.Add(this.cb_soluong);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.frmDatLenh_cbMaCK);
             this.Controls.Add(this.label1);
@@ -332,8 +320,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox frmDatLenh_cbMaCK;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cb_soluong;
-        private System.Windows.Forms.ComboBox edit_giaGD;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -350,7 +336,8 @@
         private System.Windows.Forms.ComboBox frmDatlenh;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button frmDatLenh_btnDatLenh;
-        private System.Windows.Forms.Button frmDatLenh_btnThayDoi;
+        private System.Windows.Forms.TextBox cb_soluong;
+        private System.Windows.Forms.TextBox edit_giaGD;
     }
 }
 
