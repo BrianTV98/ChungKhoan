@@ -1,0 +1,21 @@
+USE [CHUNGKHOAN]
+GO
+/****** Object:  StoredProcedure [dbo].[SP_CLEAR_BANG_GIA_TRUC_TUYEN]    Script Date: 5/3/2020 6:15:22 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- =============================================
+ALTER PROCEDURE [dbo].[SP_CLEAR_BANG_GIA_TRUC_TUYEN]
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+	delete from GIATRUCTUYEN
+END

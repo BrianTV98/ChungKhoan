@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace CHUNGKHOA_CHUYEN_DE_CNPM
 {
@@ -113,6 +114,11 @@ namespace CHUNGKHOA_CHUYEN_DE_CNPM
             {
                 bangGiaDelegate();
             }
+        }
+
+        private void gvBangGia_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
