@@ -34,12 +34,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cb_soluong = new System.Windows.Forms.ComboBox();
             this.edit_giaGD = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.frmDatLenh_lbKLMuaToiDa = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -83,9 +79,6 @@
             // frmDatLenh_cbMaCK
             // 
             this.frmDatLenh_cbMaCK.FormattingEnabled = true;
-            this.frmDatLenh_cbMaCK.Items.AddRange(new object[] {
-            "Mua",
-            "Bán"});
             this.frmDatLenh_cbMaCK.Location = new System.Drawing.Point(198, 65);
             this.frmDatLenh_cbMaCK.Name = "frmDatLenh_cbMaCK";
             this.frmDatLenh_cbMaCK.Size = new System.Drawing.Size(121, 24);
@@ -117,14 +110,6 @@
             this.edit_giaGD.Size = new System.Drawing.Size(121, 24);
             this.edit_giaGD.TabIndex = 5;
             // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(825, 65);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 24);
-            this.comboBox3.TabIndex = 6;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -141,39 +126,10 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(680, 33);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 18);
+            this.label4.Size = new System.Drawing.Size(35, 18);
             this.label4.TabIndex = 9;
-            this.label4.Text = "Giá Limit";
+            this.label4.Text = "Giá ";
             this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(826, 33);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(120, 18);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Hiệu lực của lệnh";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(995, 33);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(94, 18);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Ngày hết hạn";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(989, 65);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(114, 22);
-            this.dateTimePicker1.TabIndex = 12;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // groupBox1
             // 
@@ -189,7 +145,7 @@
             this.groupBox1.Controls.Add(this.lb);
             this.groupBox1.Location = new System.Drawing.Point(51, 124);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(638, 100);
+            this.groupBox1.Size = new System.Drawing.Size(753, 100);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             // 
@@ -219,7 +175,7 @@
             this.frmDatLenh_lbTLenhDat.AutoSize = true;
             this.frmDatLenh_lbTLenhDat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.frmDatLenh_lbTLenhDat.ForeColor = System.Drawing.Color.Red;
-            this.frmDatLenh_lbTLenhDat.Location = new System.Drawing.Point(509, 18);
+            this.frmDatLenh_lbTLenhDat.Location = new System.Drawing.Point(687, 18);
             this.frmDatLenh_lbTLenhDat.Name = "frmDatLenh_lbTLenhDat";
             this.frmDatLenh_lbTLenhDat.Size = new System.Drawing.Size(28, 18);
             this.frmDatLenh_lbTLenhDat.TabIndex = 7;
@@ -229,7 +185,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(366, 18);
+            this.label9.Location = new System.Drawing.Point(544, 18);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(140, 18);
             this.label9.TabIndex = 6;
@@ -240,7 +196,7 @@
             this.framDatLenh_lbThamChieu.AutoSize = true;
             this.framDatLenh_lbThamChieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.framDatLenh_lbThamChieu.ForeColor = System.Drawing.Color.Red;
-            this.framDatLenh_lbThamChieu.Location = new System.Drawing.Point(302, 18);
+            this.framDatLenh_lbThamChieu.Location = new System.Drawing.Point(381, 18);
             this.framDatLenh_lbThamChieu.Name = "framDatLenh_lbThamChieu";
             this.framDatLenh_lbThamChieu.Size = new System.Drawing.Size(28, 18);
             this.framDatLenh_lbThamChieu.TabIndex = 5;
@@ -250,7 +206,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(206, 18);
+            this.label8.Location = new System.Drawing.Point(285, 18);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(93, 18);
             this.label8.TabIndex = 4;
@@ -322,7 +278,7 @@
             this.frmDatLenh_btnDatLenh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.frmDatLenh_btnDatLenh.Font = new System.Drawing.Font("VNI 06 Springtime", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.frmDatLenh_btnDatLenh.ForeColor = System.Drawing.Color.White;
-            this.frmDatLenh_btnDatLenh.Location = new System.Drawing.Point(775, 201);
+            this.frmDatLenh_btnDatLenh.Location = new System.Drawing.Point(420, 261);
             this.frmDatLenh_btnDatLenh.Name = "frmDatLenh_btnDatLenh";
             this.frmDatLenh_btnDatLenh.Size = new System.Drawing.Size(108, 36);
             this.frmDatLenh_btnDatLenh.TabIndex = 16;
@@ -335,7 +291,7 @@
             this.frmDatLenh_btnThayDoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.frmDatLenh_btnThayDoi.Font = new System.Drawing.Font("VNI 06 Springtime", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.frmDatLenh_btnThayDoi.ForeColor = System.Drawing.Color.White;
-            this.frmDatLenh_btnThayDoi.Location = new System.Drawing.Point(911, 201);
+            this.frmDatLenh_btnThayDoi.Location = new System.Drawing.Point(575, 261);
             this.frmDatLenh_btnThayDoi.Name = "frmDatLenh_btnThayDoi";
             this.frmDatLenh_btnThayDoi.Size = new System.Drawing.Size(114, 36);
             this.frmDatLenh_btnThayDoi.TabIndex = 17;
@@ -347,18 +303,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1127, 309);
+            this.ClientSize = new System.Drawing.Size(960, 309);
             this.Controls.Add(this.frmDatLenh_btnThayDoi);
             this.Controls.Add(this.frmDatLenh_btnDatLenh);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.frmDatlenh);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.edit_giaGD);
             this.Controls.Add(this.cb_soluong);
             this.Controls.Add(this.label2);
@@ -382,12 +334,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cb_soluong;
         private System.Windows.Forms.ComboBox edit_giaGD;
-        private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label frmDatLenh_lbTran;
         private System.Windows.Forms.Label lb;

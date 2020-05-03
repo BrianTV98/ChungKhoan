@@ -14,7 +14,7 @@ namespace CHUNGKHOA_CHUYEN_DE_CNPM
     public partial class frm_bang_gia : Form
     {
         
-        public string m_connect = @"Data Source=DESKTOP-0M1C7IP;Initial Catalog=CHUNGKHOAN;Integrated Security =True;User id=sa;Password=123;";
+        public string m_connect = Program.rootSeverName;
         SqlConnection con = null;
         public delegate void BangGiaDelegate();
         public event BangGiaDelegate bangGiaDelegate;
