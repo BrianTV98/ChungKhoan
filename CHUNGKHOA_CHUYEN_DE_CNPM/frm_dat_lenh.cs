@@ -58,12 +58,39 @@ namespace CHUNGKHOA_CHUYEN_DE_CNPM
 
         private void frmDatLenh_btnDatLenh_Click(object sender, EventArgs e)
         {
+
+            checkValidate();
             int kq = -1;
-            String macp = frmDatLenh_cbMaCK.Text.ToString().Trim();
-            String ngay = DateTime.Now.ToString();
-            String loaiGD = (frmDatLenh_cb_loai_lenh.Text.ToString().Trim()=="Mua"? "M":"B");
-            int soluongGD = int.Parse( cb_soluong.Text.ToString());
-            String giaGD = edit_giaGD.Text.ToString();
+            String macp = "";
+            String ngay = "";
+            String loaiGD = "";
+            int soluongGD = 0;
+            float giaGD = 0;
+
+            try
+            {
+              
+                macp = frmDatLenh_cbMaCK.Text.ToString().Trim();
+                ngay = DateTime.Now.ToString().Trim();
+                loaiGD = (frmDatLenh_cb_loai_lenh.Text.ToString().Trim() == "Mua" ? "M" : "B");
+                soluongGD = int.Parse(cb_soluong.Text.ToString());
+                giaGD = float.Parse(edit_giaGD.Text.ToString().Trim());
+            }
+            catch (Exception exeption)
+            {
+                MessageBox.Show(exeption.ToString());
+                return;
+            }
+
+            //check validate
+
+            if( macp ==""||ngay==""||loaiGD ==""|| soluongGD <= 0 || giaGD <= 0)
+            {
+                MessageBox.Show("Nhap khong hop le");
+                return;
+            }
+            
+
             Program.conn.ConnectionString = Program.rootSeverName;
             int kn = Program.KetNoi();
             if (kn == 0)
@@ -84,7 +111,7 @@ namespace CHUNGKHOA_CHUYEN_DE_CNPM
 
             try
             {
-                 kq = Program.execStoreProcedureWithReturnValue(sqlCommand);
+                kq = Program.execStoreProcedureWithReturnValue(sqlCommand);
                 if(kq!=-1)
                 MessageBox.Show("Thanh cong", " Thanh Cong", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -98,6 +125,11 @@ namespace CHUNGKHOA_CHUYEN_DE_CNPM
                 MessageBox.Show("Loi"," Loi ket noi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             Program.conn.Close();
+        }
+
+        private void checkValidate()
+        {
+            
         }
 
         private void frm_dat_lenh_Load(object sender, EventArgs e)
